@@ -43,12 +43,12 @@ const items = [
   },
 ]
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar() {
 
   const [open, setOpen] = React.useState(false)
   return (
     <>
-      <Sidebar {...props}>
+      <Sidebar>
         <SidebarContent>
               <SidebarGroup>
                   <Logo />
