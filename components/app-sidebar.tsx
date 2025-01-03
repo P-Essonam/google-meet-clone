@@ -48,7 +48,7 @@ export function AppSidebar() {
   const [open, setOpen] = React.useState(false)
   return (
     <>
-      <Sidebar>
+      <Sidebar >
         <SidebarContent>
               <SidebarGroup>
                   <Logo />
