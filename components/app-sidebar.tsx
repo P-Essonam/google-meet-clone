@@ -48,7 +48,7 @@ export function AppSidebar() {
   const [open, setOpen] = React.useState(false)
   return (
     <>
-      <Sidebar >
+      <Sidebar>
         <SidebarContent>
               <SidebarGroup>
                   <Logo />
@@ -112,10 +112,10 @@ export function AppSidebar() {
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarFooter>
+        {open && 
+          <DeleteAccountModal open={open} setOpen={setOpen} />
+        }
       </Sidebar>
-      {open && 
-        <DeleteAccountModal open={open} setOpen={setOpen} />
-      }
     </>
   )
 }
