@@ -113,8 +113,9 @@ export function AppSidebar() {
           </SidebarMenu>
         </SidebarFooter>
       </Sidebar>
-      <DeleteAccountModal open={open} setOpen={setOpen} />
-    
+      {open && 
+        <DeleteAccountModal open={open} setOpen={setOpen} />
+      }
     </>
   )
 }
