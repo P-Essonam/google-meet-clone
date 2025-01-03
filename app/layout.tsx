@@ -5,6 +5,7 @@ import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 import { Toaster } from "@/components/ui/sonner"
+import { Analytics } from "@vercel/analytics/react"
  
 
 const geistSans = localFont({
@@ -38,6 +39,7 @@ export default async function RootLayout({
         >
           {children}
           <Toaster />
+          <Analytics/>
         </body>
       </html>
     </SessionProvider>
