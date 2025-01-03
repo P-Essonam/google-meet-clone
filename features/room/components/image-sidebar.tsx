@@ -76,7 +76,7 @@ const ImageSidebar = ({ blurLevel, setOpen, setBlurLevel} : Props) => {
                 </ToggleGroup>
 
             </div>
-            {!isReady && (
+            {!isReady && isSupported && (
                 <div className='flex items-center justify-center flex-1'>
                     <Loader className='w-4 h-4 animate-spin text-muted-foreground' />
                 </div>
@@ -92,7 +92,7 @@ const ImageSidebar = ({ blurLevel, setOpen, setBlurLevel} : Props) => {
             <ScrollArea>
                 <div className='p-4'>
                     <div className='grid grid-cols-2 gap-4'>
-                        {backgroundImages && backgroundImages.map((image, index) => {
+                        {isSupported && backgroundImages && backgroundImages.map((image, index) => {
                             return (
                                 <button
                                     key={index}
